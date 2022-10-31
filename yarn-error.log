@@ -1,0 +1,49 @@
+Arguments:
+  C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\yarn\bin\yarn.js add Inquirer.js commander.js chalk
+
+PATH:
+  D:\work\cmder\bin;D:\work\cmder\vendor\conemu-maximus5\ConEmu\Scripts;D:\work\cmder\vendor\conemu-maximus5;D:\work\cmder\vendor\conemu-maximus5\ConEmu;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;D:\work\nvm;C:\Program Files\nodejs;D:\work\Git\cmd;D:\work\Git\usr\bin;D:\work\Git\mingw64\libexec\git-core;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;D:\work\cmder;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Users\218823\AppData\Local\Programs\Python\Python37-32\Scripts\;C:\Users\218823\AppData\Local\Programs\Python\Python37-32\;C:\Users\218823\AppData\Local\Microsoft\WindowsApps;D:\work\nvm;C:\Program Files\nodejs;D:\work\Git\usr\bin;D:\work\Git\mingw64\libexec\git-core;D:\work\cmder;;D:\work\Git\usr\bin;D:\work\Git\usr\share\vim\vim74;D:\work\cmder\
+
+Yarn version:
+  1.22.18
+
+Node version:
+  14.18.3
+
+Platform:
+  win32 x64
+
+Trace:
+  Error: https://registry.npmjs.org/Inquirer.js: Not found
+      at Request.params.callback [as _callback] (D:\work\nvm\v14.18.3\node_modules\yarn\lib\cli.js:66138:18)
+      at Request.self.callback (D:\work\nvm\v14.18.3\node_modules\yarn\lib\cli.js:140883:22)
+      at Request.emit (events.js:400:28)
+      at Request.<anonymous> (D:\work\nvm\v14.18.3\node_modules\yarn\lib\cli.js:141855:10)
+      at Request.emit (events.js:400:28)
+      at IncomingMessage.<anonymous> (D:\work\nvm\v14.18.3\node_modules\yarn\lib\cli.js:141777:12)
+      at Object.onceWrapper (events.js:519:28)
+      at IncomingMessage.emit (events.js:412:35)
+      at endReadableNT (internal/streams/readable.js:1334:12)
+      at processTicksAndRejections (internal/process/task_queues.js:82:21)
+
+npm manifest:
+  {
+    "name": "kyegit-cli",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "grunt"
+    },
+    "keywords": [
+      "kye"
+    ],
+    "author": "xingtao",
+    "license": "ISC"
+  }
+
+yarn manifest:
+  No manifest
+
+Lockfile:
+  No lockfile

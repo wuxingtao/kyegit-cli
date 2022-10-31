@@ -1,0 +1,24 @@
+{
+  "name": "kyegit-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "kyeGit": "./bin/index.js"
+  },
+  "type": "module",
+  "scripts": {
+    "test": "grunt"
+  },
+  "keywords": [
+    "kye"
+  ],
+  "author": "xingtao",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.1.2",
+    "commander": "^9.4.1",
+    "inquirer": "^9.1.4",
+    "shelljs": "^0.8.5"
+  }
+}

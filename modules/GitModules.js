@@ -53,7 +53,7 @@ class GitModules{
   /**
    * 获取创建的分支名
    * @param branchPrefix 主分支前缀
-   * @param daySelect ['today','tomorrow']
+   * @param daySelect ['today','tomorrow'] 命名规则天数
    * @return {string}
    */
   getBranchName(branchPrefix, daySelect){
@@ -67,7 +67,7 @@ class GitModules{
     const day = date.getDate()
     const monthFull = month < 10 ? `0${month}` : month
     const dayFull = day < 10 ? `0${day}` : day
-    return `${branchPrefix}-${year}${monthFull}${dayFull}_1`
+    return `${branchPrefix}-${year}${monthFull}${dayFull}`
   }
 }
 export default GitModules

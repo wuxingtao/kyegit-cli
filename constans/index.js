@@ -13,8 +13,14 @@ export const gitLists = [
   {
     name: 'netc-h5-modules',
     dir: 'D:\\gitlab\\kyegit-lists\\netc-h5-modules',
-    branchPrefix: 'test',
+    branchPrefix: 'master',
     git: 'git@gitlab.ky-tech.com.cn:KYE-NETC-FRONTEND/netc-h5-modules.git'
+  },
+  {
+    name: 'ERP-EAM',
+    dir: 'D:\\gitlab\\kyegit-lists\\eam',
+    branchPrefix: 'prod',
+    git: 'git@gitlab.ky-tech.com.cn:erp-frontend/eam.git'
   },
   {
     name: 'website',
@@ -29,10 +35,10 @@ export const gitLists = [
     git: 'git@gitlab.ky-tech.com.cn:KYE-NETC-FRONTEND/website-static-page.git'
   },
   {
-    name: 'ERP-EAM',
-    dir: 'D:\\gitlab\\kyegit-lists\\eam',
-    branchPrefix: 'prod',
-    git: 'git@gitlab.ky-tech.com.cn:erp-frontend/eam.git'
+    name: 'kyexpress-cms',
+    dir: 'D:\\gitlab\\kyegit-lists\\kyexpress-cms',
+    branchPrefix: 'test',
+    git: 'git@gitlab.ky-tech.com.cn:KYE-NETC-BACKEND/kyexpress-cms.git'
   },
   {
     name: 'netc-customer-code',

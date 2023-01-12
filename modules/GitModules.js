@@ -14,7 +14,14 @@ class GitModules{
   existBranch(name,git){
     // git ls-remote --heads git@github.com:user/repo.git branch-name
   }
-  create(list,daySelect){
+
+  /**
+   *
+   * @param list
+   * @param daySelect ['today','tomorrow'] 命名规则天数
+   * @param dayAfter 几天后
+   */
+  create(list,{daySelect,dayAfter}){
     // 判断git命令是否可用
     if(!shell.which('git')){
       console.log(chalk.red('no git command'));
@@ -22,7 +29,7 @@ class GitModules{
     }
     list.forEach(f=>{
       const {dir,branchPrefix} = gitLists.find(i=>i.name === f)
-      const branch = this.getBranchName(branchPrefix,daySelect)
+      const branch = this.getBranchName(branchPrefix,{daySelect,dayAfter})
       console.log(branch)
 
       shell.cd(dir);
@@ -54,14 +61,20 @@ class GitModules{
    * 获取创建的分支名
    * @param branchPrefix 主分支前缀
    * @param daySelect ['today','tomorrow'] 命名规则天数
+   * @param dayAfter 几天后
    * @return {string}
    */
-  getBranchName(branchPrefix, daySelect){
+  getBranchName(branchPrefix, {daySelect,dayAfter}){
     let date = new Date()
-    if(daySelect === 'tomorrow' ){
-      date = date.setDate(date.getDate() + 1);
+    const dayAfterNum = dayAfter ? Number(dayAfter) : (daySelect === 'tomorrow' ? 1 : 0)
+    if(dayAfterNum){
+      date = date.setDate(date.getDate() + dayAfterNum);
       date = new Date(date)
     }
+    // if(daySelect === 'tomorrow' ){
+    //   date = date.setDate(date.getDate() + 1);
+    //   date = new Date(date)
+    // }
     const year = date.getFullYear()
     const month = date.getMonth() + 1
     const day = date.getDate()

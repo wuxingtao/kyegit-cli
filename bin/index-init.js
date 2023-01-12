@@ -34,7 +34,13 @@ const questions = [{
   name: 'daySelect',
   message: '请选择创建日期',
   choices: ['today','tomorrow']
-}]
+},
+  {
+    type: 'input',
+    name: 'dayAfter',
+    message: '请输入创建多少天后分支',
+  }
+]
 
 function getModule(){
   return new Promise(resolve=>{
@@ -47,9 +53,9 @@ function getModule(){
 }
 
 async function createBranchs() {
-  const { gitList,daySelect } = await getModule()
+  const { gitList,daySelect,dayAfter } = await getModule()
   const gitModules = new GitModules()
-  gitModules.create(gitList,daySelect)
+  gitModules.create(gitList,{daySelect,dayAfter})
 
 }
 createBranchs()
